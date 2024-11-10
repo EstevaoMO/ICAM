@@ -1,0 +1,107 @@
+/* Fonte: Popins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Fonte: Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Fonte: Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /* Paleta de Cores */
+    --primaria: #1c3fdb;
+    --secundaria: #102dad;
+    --terciaria: #0d248b;
+    --destaque: #6d6d6d;
+    --detalhes: #fbfbfb;
+    --branco: #fbfbfb;
+    --preto: #0c0c0c;
+    --hover-padrao: #f1f1f1;
+    --sem-conteudo: #d1d1d1;
+
+    /* Espaçamento */
+    --esp-minimo: 0.2rem;
+    --esp-pequeno: 0.5rem;
+    --esp-medio: 0.8rem;
+    --esp-grande: 1.2rem;
+    --esp-enorme: 1.5rem;
+
+
+    /* Tamanhos de Fonte */
+    --fon-minimo: 0.4em;
+    --fon-pequeno: 0.6em;
+    --fon-medio: 1em;
+    --fon-grande: 1.6em;
+    --fon-enorme: 2.4em;
+}
+
+body{
+    font-family: 'Poppins', "Nunito", "Raleway", "Noto Sans", sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+}
+
+.layout{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--branco);
+    padding: var(--esp-pequeno);
+    font-size: var(--fon-medio);
+}
+
+.layout#header{
+    gap: var(--esp-pequeno);
+}
+
+.conteudo-header{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-interacoes{
+    display: inline-flex;
+    align-items: center;
+}
+
+.interacao-header{
+    display: none;
+}
+
+.icone{
+    width: 40px;
+    height: 40px;
+}
+
+.icone.logo{
+    width: 40px;
+    height: 40px;
+}
+
+.icone#menu-paginas{
+    width: 35px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .interacao-header{
+        display: flex;
+        transition: all .3s ease;
+        text-decoration: none;
+        color: var(--secundaria);
+        margin: 0px var(--esp-pequeno);
+    }
+    
+    .interacao-header:hover{
+        text-decoration: underline;
+        text-decoration-color: var(--secundaria);
+        text-decoration-thickness: 1.5px;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .interacao-header{
+        margin: 0px var(--esp-medio);
+    }
+}
