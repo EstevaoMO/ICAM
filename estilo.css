@@ -33,15 +33,27 @@
     --fon-enorme: 2em;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 body{
     font-family: 'Poppins', "Nunito", "Raleway", "Noto Sans", sans-serif;
     background-color: #FFFFFF;
-    margin: 0;
 }
 
 .layout{
     width: 100%;
     display: flex;
+    position: relative;
     justify-content: center;
     background-color: var(--branco);
     padding: var(--esp-pequeno);
@@ -59,7 +71,7 @@ body{
 }
 
 .container-interacoes{
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -67,12 +79,7 @@ body{
     display: none;
 }
 
-.icone{
-    width: 40px;
-    height: 40px;
-}
-
-.icone.logo{
+.icone, .logo{
     width: 40px;
     height: 40px;
 }
@@ -80,7 +87,6 @@ body{
 .icone#menu-paginas{
     width: 35px;
 }
-
 
 .banner{
     background-color: var(--sem-conteudo);
@@ -157,9 +163,56 @@ body{
     font-weight: 600;
 }
 
-#tratamentos{
+#h2-tratamentos{
+    font-size: var(--fon-enorme);
+    margin-bottom: var(--esp-pequeno);
+    font-weight: 600;
+}
+
+.container-tratamentos{
+    display: block;
+    margin: var(--esp-medio) auto;
+    margin-bottom: var(--esp-enorme);
+    width: 30rem;
+    height: min-content;
+}
+
+.card.tratamentos{
+    box-shadow: 1.5px 1.5px var(--destaque);
+    border: 1px groove var(--destaque);
+    padding: var(--esp-enorme) calc(2* var(--esp-grande));
+    border-radius: 10px;
+}
+
+.titulo-tratamento{
     font-size: var(--fon-grande);
-    font-weight: 500;
+    color: var(--secundaria);
+    text-align: center;
+    margin: 0;
+}
+
+.texto-tratamento{
+    text-align: justify;
+    margin: 0;
+    margin-bottom: var(--esp-grande);
+    padding: 0px var(--esp-grande);
+}
+
+.container-saiba-mais{
+    display: flex;
+    justify-content: center;
+}
+
+.saiba-mais{
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 8em;
+    background-color: var(--primaria);
+    padding: var(--esp-pequeno);
+    border-radius: 50px;
+    font-weight: 350;
+    font-size: var(--fon-medio);
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -187,6 +240,10 @@ body{
     }
 
     .titulo-banner{
+        font-size: var(--fon-enorme);
+    }
+
+    #h2-tratamentos{
         font-size: var(--fon-enorme);
     }
 }
