@@ -22,15 +22,15 @@
     --esp-pequeno: 0.5rem;
     --esp-medio: 0.8rem;
     --esp-grande: 1.2rem;
-    --esp-enorme: 1.5rem;
+    --esp-enorme: 2rem;
 
 
     /* Tamanhos de Fonte */
-    --fon-minimo: 0.4em;
-    --fon-pequeno: 0.6em;
-    --fon-medio: 1em;
-    --fon-grande: 1.6em;
-    --fon-enorme: 2.4em;
+    --fon-minimo: 0.5em;
+    --fon-pequeno: 0.7em;
+    --fon-medio: 1.2em;
+    --fon-grande: 1.8em;
+    --fon-enorme: 2em;
 }
 
 body{
@@ -81,6 +81,87 @@ body{
     width: 35px;
 }
 
+
+.banner{
+    background-color: var(--sem-conteudo);
+    margin-bottom: var(--esp-enorme);
+    padding: var(--esp-medio);
+    width: 100%;
+}
+
+.titulo-banner, .texto-banner{
+    color: #FFFFFF;
+}
+
+.titulo-banner{
+    font-size: var(--fon-grande);
+    text-align: center;
+}
+
+.texto-banner{
+    font-family: 'Nunito', sans-serif;
+    font-size: var(--fon-medio);
+}
+
+.container-cards{
+    display: block;
+    margin: auto;
+    padding: 0px var(--esp-grande);
+}
+
+.card{
+    display: block;
+    margin: auto;
+    margin-bottom: var(--esp-enorme);
+    width: 85%;
+    box-shadow: 2px 2px var(--destaque);
+}
+
+.card#agendar{
+    background: linear-gradient(to right, var(--primaria), var(--secundaria));
+    border-radius: 15px;
+    padding: var(--esp-grande);
+}
+
+.titulo-card, .texto-card, #numero-contato{
+    color: #FFFFFF;
+}
+
+.titulo-card{
+    font-size: var(--fon-grande);
+    margin: var(--esp-medio) 0px;
+    margin-bottom: var(--esp-minimo);
+}
+
+.texto-card, .container-contato{
+    padding-left: var(--esp-medio);
+}
+
+.texto-card{
+    margin: 0px;
+    margin-bottom: var(--esp-medio);
+}
+
+.container-contato{
+    display: flex;
+    align-items: center;
+    gap: var(--esp-pequeno);
+}
+
+.icone#WhatsApp{
+    width: 35px;
+    height: 35px;
+}
+
+#numero-contato{
+    font-weight: 600;
+}
+
+#tratamentos{
+    font-size: var(--fon-grande);
+    font-weight: 500;
+}
+
 @media screen and (min-width: 768px) {
 
     .interacao-header{
@@ -103,5 +184,9 @@ body{
 @media screen and (min-width: 992px) {
     .interacao-header{
         margin: 0px var(--esp-medio);
+    }
+
+    .titulo-banner{
+        font-size: var(--fon-enorme);
     }
 }
