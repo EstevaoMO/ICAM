@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css" text="text/css">
-
+    <script src="script.js" defer></script>
     <title>Página Inicial - Instituto Cristão de Atendimento Multidisciplinar, ICAM</title>
 </head>
 <body>
+    <div class = 'linha-vertical'>
+        <div class="ret"></div>
+    </div>
     
     <div class="main">
         <header class="layout" id="header">
@@ -15,11 +18,11 @@
                 <img class="icone logo" src="img/icamlogoatual.jpeg" alt="logo ICAM">
                 
                 <div class="container-interacoes">
-                    <a href="#" class="interacao-header" id="n1">Terapias</a>
-                    <a href="#" class="interacao-header">Cursos</a>
-                    <a href="#" class="interacao-header">Contribua</a>
-                    <a href="#" class="interacao-header">Nossas Redes</a>
-                    <a href="#" class="interacao-header">Sobre Nós</a>
+                    <a href="#" class="link-header" id="n1">Terapias</a>
+                    <a href="#" class="link-header">Cursos</a>
+                    <a href="#" class="link-header">Contribua</a>
+                    <a href="#" class="link-header">Nossas Redes</a>
+                    <a href="#" class="link-header">Sobre Nós</a>
                 </div>
                 <img class="icone" id="menu-paginas" src="icone/menu-barra.svg" alt="menu de páginas">
             </div>
@@ -34,7 +37,7 @@
             <div class="card" id="agendar">
                 <h2 class="titulo-card">Agende Sua Consulta.</h2>
                 <p class="texto-card">Disponibilizamos atendimentos presenciais e online.</p>
-
+                
                 <div class="container-contato">
                     <img class="icone" id="WhatsApp" src="icone/Print_Glyph_White.png" alt="Ícone do WhatsApp">
                     <p id="numero-contato">+55 (01) 2345-6789</p>
@@ -43,23 +46,42 @@
 
             <h2 id="h2-tratamentos">Tratamentos</h2>
 
+            
             <div class="container-tratamentos">
-                <div class="card tratamentos" id="psicomotricidade">
+                <button class="botao-carrosel" id="anterior"> <img class="icone" src="icone/chevron_esquerda.svg" alt="tratamento anterior"> </button>
+                
+                <ul class="carrosel">
+                <li class="card tratamentos" id="psicomotricidade">
                     <h3 class="titulo-tratamento">Psicomotricidade</h3>
-                    <p class="texto-tratamento">Um texto sobre psicomotricidade que eu não tenho a menor capacidade cognitiva
-                        de redigir.
+                    <p class="texto-tratamento">
+                        Um texto sobre psicomotricidade que eu não tenho a 
+                        menor capacidade cognitivade redigir.
                     </p>
-                    <div class="container-saiba-mais">
-                        <a class="saiba-mais" href="#">Saiba Mais</a>
-                    </div>
-                </div>
+                    <div class="container-saiba-mais"> <a class="saiba-mais" href="#" alt="leia mais sobre psicomotricidade">Saiba Mais</a> </div>
+                </li>
+                <li class="card tratamentos" id="psicopedagogia">
+                    <h3 class="titulo-tratamento">Psicopedagogia</h3>
+                    <p class="texto-tratamento">
+                        Um texto sobre psicopedagogia que eu não tenho a 
+                        menor capacidade cognitivade redigir.
+                    </p>
+                    <div class="container-saiba-mais"> <a class="saiba-mais" href="#" alt="leia mais sobre psicopedagogia">Saiba Mais</a> </div>
+                </li>
+                <li class="card tratamentos" id="psicóloga">
+                    <h3 class="titulo-tratamento">Psicólogo</h3>
+                    <p class="texto-tratamento">
+                        Um texto sobre psicologia que eu não tenho a 
+                        menor capacidade cognitivade redigir.
+                    </p>
+                    <div class="container-saiba-mais"> <a class="saiba-mais" href="#" alt="leia mais sobre psicologia">Saiba Mais</a> </div>
+                </li>
+                </ul>
 
-                <div class="controles-tratamentos">
-                    <button class="anterior"> < </button>
-                    <p>. . . . . . . .</p>
-                    <button class="proximo"> > </button>
-                </div>
+                <button class="botao-carrosel" id="proximo"> <img class="icone" src="icone/chevron_direita.svg" alt="próximo tratamento"> </button>
             </div>
+            
+
+                    <!-- <p>. . . . . . . .</p> -->
         </div>
         
         <div class="banner">

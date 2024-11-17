@@ -5,6 +5,27 @@
 /* Fonte: Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* .linha-vertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: red;
+    z-index: 9999;
+}
+    */
+/* .ret {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - (20rem / 2));
+    width: 20rem;
+    background-color: red;
+    opacity: 35%;
+    z-index: 9999;
+} */
+
 :root{
     /* Paleta de Cores */
     --primaria: #1c3fdb;
@@ -35,6 +56,9 @@
 
 * {
     box-sizing: border-box;
+
+    /* Para debug */
+/*     border: 1px solid red; */
 }
 
 
@@ -48,6 +72,10 @@ html, body{
 body{
     font-family: 'Poppins', "Nunito", "Raleway", "Noto Sans", sans-serif;
     background-color: #FFFFFF;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .layout{
@@ -75,7 +103,7 @@ body{
     align-items: center;
 }
 
-.interacao-header{
+.link-header{
     display: none;
 }
 
@@ -120,7 +148,7 @@ body{
     margin: auto;
     margin-bottom: var(--esp-enorme);
     width: 85%;
-    box-shadow: 2px 2px var(--destaque);
+    box-shadow: 2px 2px var(--terciaria);
 }
 
 .card#agendar{
@@ -169,33 +197,91 @@ body{
     font-weight: 600;
 }
 
+
 .container-tratamentos{
     display: block;
+    position: relative;
     margin: var(--esp-medio) auto;
     margin-bottom: var(--esp-enorme);
-    width: 30rem;
+    width: 100%;
     height: min-content;
 }
 
+.carrosel {
+    display: grid;
+    max-width: fit-content;
+    height: fit-content;
+    grid-auto-flow: column;
+    place-items: center;
+    justify-content: baseline;
+    gap: var(--esp-enorme);
+    overflow: auto;
+    padding: var(--esp-minimo);
+    margin-left: calc(50% - (20rem/2));
+    margin-right: calc(50% - (20rem/2));
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.carrosel::-webkit-scrollbar{
+    display: none;
+}
+
+.botao-carrosel{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--branco);
+    border-radius: 50%;
+    align-items: center;
+    justify-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.botao-carrosel .icone{
+    width: 40px;
+    height: 40px;
+}
+
+.botao-carrosel#anterior{
+    left: 20px;
+}
+
+.botao-carrosel#proximo{
+    right: 20px;
+}
+
 .card.tratamentos{
-    box-shadow: 1.5px 1.5px var(--destaque);
-    border: 1px groove var(--destaque);
-    padding: var(--esp-enorme) calc(2* var(--esp-grande));
+    width: 20rem;
+    height: 20rem;
+    box-shadow: none;
+    border: 1.5px groove var(--preto);
+    padding: var(--esp-enorme) calc(1.5 * var(--esp-grande));
     border-radius: 10px;
+    margin: 0;
 }
 
 .titulo-tratamento{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     font-size: var(--fon-grande);
     color: var(--secundaria);
     text-align: center;
     margin: 0;
+    padding: 0;
 }
 
 .texto-tratamento{
     text-align: justify;
     margin: 0;
     margin-bottom: var(--esp-grande);
-    padding: 0px var(--esp-grande);
+    padding: var(--esp-minimo) var(--esp-grande);
 }
 
 .container-saiba-mais{
@@ -215,9 +301,18 @@ body{
     text-align: center;
 }
 
+.saiba-mais:hover{
+    background-color: var(--secundaria);
+}
+
+.saiba-mais:active{
+    width: 7.95em;
+    font-size: calc(var(--fon-medio) * 0.99);
+}
+
 @media screen and (min-width: 768px) {
 
-    .interacao-header{
+    .link-header{
         display: flex;
         transition: all .3s ease;
         text-decoration: none;
@@ -225,17 +320,20 @@ body{
         margin: 0px var(--esp-pequeno);
     }
     
-    .interacao-header:hover{
+    .link-header:hover{
         text-decoration: underline;
         text-decoration-color: var(--secundaria);
         text-decoration-thickness: 1.5px;
         cursor: pointer;
     }
 
+    .link-header:visited{
+        color: var(--secundaria);
+    }
 }
 
 @media screen and (min-width: 992px) {
-    .interacao-header{
+    .link-header{
         margin: 0px var(--esp-medio);
     }
 
