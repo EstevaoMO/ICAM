@@ -189,6 +189,13 @@ body{
 
 #numero-contato{
     font-weight: 600;
+    font-size: var(--fon-medio);
+    text-decoration: none;
+}
+
+#numero-contato:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 #h2-tratamentos{
@@ -232,10 +239,10 @@ body{
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 40px;
-    height: 40px;
+    width: 3rem;
+    height: 3rem;
     border: none;
-    background-color: var(--branco);
+    background-color: #f1f1f1;
     border-radius: 50%;
     align-items: center;
     justify-items: center;
@@ -244,16 +251,17 @@ body{
 }
 
 .botao-carrosel .icone{
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
 }
 
 .botao-carrosel#anterior{
-    left: 20px;
+    left: 5px;
 }
 
 .botao-carrosel#proximo{
-    right: 20px;
+    right: 5px;
 }
 
 .card.tratamentos{
@@ -368,10 +376,14 @@ body{
     display: flex; 
     position: relative;
     width: 50%;
-    height: 15rem;
+    height: 18rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.conteudo-cartao .texto-card{
+    font-size: calc(var(--fon-pequeno) * 1.25);
 }
 
 .cartao p{
