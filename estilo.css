@@ -257,6 +257,7 @@ body{
 }
 
 .card.tratamentos{
+    position: relative;
     width: 20rem;
     height: 20rem;
     box-shadow: none;
@@ -284,12 +285,19 @@ body{
     padding: var(--esp-minimo) var(--esp-grande);
 }
 
-.container-saiba-mais{
+.container-botao{
     display: flex;
     justify-content: center;
+    position: absolute;
 }
 
-.saiba-mais{
+.container-botao.saibamais{
+    bottom: calc(var(--esp-enorme) * 1.5);
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.botao{
     text-decoration: none;
     color: #FFFFFF;
     width: 8em;
@@ -301,13 +309,92 @@ body{
     text-align: center;
 }
 
-.saiba-mais:hover{
+.botao:hover{
     background-color: var(--secundaria);
 }
 
-.saiba-mais:active{
+.botao:active{
     width: 7.95em;
     font-size: calc(var(--fon-medio) * 0.99);
+}
+
+.container-cartoes{
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-grande);
+}
+
+.card-convidativo, .cartao{
+    margin: 0;
+    padding: 0;
+}
+
+.card-convidativo{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta-card{
+    background-color: var(--primaria);
+    color: var(--branco);
+    position: relative;
+    width: fit-content;
+    align-content: center;
+    height: 4rem;
+    left: var(--esp-medio);
+    text-align: center;
+    border-radius: 15px;
+    top: 20px;
+    padding: 0;
+}
+
+.topico-etiqueta{
+    padding: 0;
+    margin: 0px 20px;
+    font-size: var(--fon-grande);
+}
+
+.cartao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: min-content;
+}
+
+.cartao .conteudo-cartao{
+    display: flex; 
+    position: relative;
+    width: 50%;
+    height: 15rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao p{
+    color: var(--preto);
+    padding: var(--esp-enorme);
+    font-size: calc(var(--fon-medio) * 0.8);
+    text-align: justify;
+}
+
+.cartao img{
+    width: 50%;
+    height: 15rem;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    object-fit: cover;
+    object-position: -65px;
+    margin: 0;
+}
+
+.container-botao.vermais{
+    width: 7rem;
+    font-size: calc(var(--fon-pequeno) * 1.25);
+    bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
