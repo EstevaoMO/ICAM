@@ -39,19 +39,19 @@
     --sem-conteudo: #d1d1d1;
 
     /* Espaçamento */
-    --esp-minimo: 0.2rem;
-    --esp-pequeno: 0.5rem;
-    --esp-medio: 0.8rem;
-    --esp-grande: 1.2rem;
-    --esp-enorme: 2rem;
+    --esp-minimo: 0.1rem;
+    --esp-pequeno: 0.3rem;
+    --esp-medio: 0.5rem;
+    --esp-grande: 1rem;
+    --esp-enorme: 1.8rem;
 
 
     /* Tamanhos de Fonte */
     --fon-minimo: 0.5em;
-    --fon-pequeno: 0.7em;
-    --fon-medio: 1.2em;
-    --fon-grande: 1.8em;
-    --fon-enorme: 2em;
+    --fon-pequeno: 0.8em;
+    --fon-medio: 1em;
+    --fon-grande: 1.5em;
+    --fon-enorme: 1.8em;
 }
 
 * {
@@ -140,14 +140,14 @@ body{
 .container-cards{
     display: block;
     margin: auto;
-    padding: 0px var(--esp-grande);
+    padding: 0px var(--esp-medio);
 }
 
 .card{
     display: block;
     margin: auto;
     margin-bottom: var(--esp-enorme);
-    width: 85%;
+    width: 90%;
     box-shadow: 2px 2px var(--terciaria);
 }
 
@@ -163,8 +163,8 @@ body{
 
 .titulo-card{
     font-size: var(--fon-grande);
-    margin: var(--esp-medio) 0px;
-    margin-bottom: var(--esp-minimo);
+    margin: 0;
+    margin-bottom: var(--esp-pequeno);
 }
 
 .texto-card, .container-contato{
@@ -173,13 +173,13 @@ body{
 
 .texto-card{
     margin: 0px;
-    margin-bottom: var(--esp-medio);
+    margin-bottom: var(--esp-grande);
 }
 
 .container-contato{
     display: flex;
     align-items: center;
-    gap: var(--esp-pequeno);
+    gap: var(--esp-medio);
 }
 
 .icone#WhatsApp{
@@ -208,7 +208,7 @@ body{
 .container-tratamentos{
     display: block;
     position: relative;
-    margin: var(--esp-medio) auto;
+    margin: var(--esp-pequeno) auto;
     margin-bottom: var(--esp-enorme);
     width: 100%;
     height: min-content;
@@ -223,9 +223,8 @@ body{
     justify-content: baseline;
     gap: var(--esp-enorme);
     overflow: auto;
-    padding: var(--esp-minimo);
-    margin-left: calc(50% - (20rem/2));
-    margin-right: calc(50% - (20rem/2));
+    margin: 0 calc(50% - (20rem/2));
+    margin-bottom: var(--esp-pequeno);
     padding: 0;
     scroll-behavior: smooth;
 }
@@ -234,21 +233,27 @@ body{
     display: none;
 }
 
+.controles-carrosel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    
+}
+
 .botao-carrosel{
-    z-index: 10;
-    position: absolute;
+    margin: 0;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
-    width: 3rem;
-    height: 3rem;
-    border: none;
-    background-color: #f1f1f1;
-    border-radius: 50%;
     align-items: center;
     justify-items: center;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 50%;
 }
 
 .botao-carrosel .icone{
@@ -291,7 +296,7 @@ body{
     text-align: justify;
     margin: 0;
     margin-bottom: var(--esp-grande);
-    padding: var(--esp-minimo) var(--esp-grande);
+    padding: var(--esp-medio) var(--esp-enorme);
 }
 
 .container-botao{
@@ -314,7 +319,7 @@ body{
     padding: var(--esp-pequeno);
     border-radius: 50px;
     font-weight: 350;
-    font-size: var(--fon-medio);
+    font-size: calc(var(--fon-medio) * 1.1);
     text-align: center;
 }
 
@@ -323,8 +328,7 @@ body{
 }
 
 .botao:active{
-    width: 7.95em;
-    font-size: calc(var(--fon-medio) * 0.99);
+    background-color: var(--terciaria);
 }
 
 .container-cartoes{
@@ -377,14 +381,17 @@ body{
     display: flex; 
     position: relative;
     width: 50%;
-    height: 18rem;
+    height: 15rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .conteudo-cartao .texto-card{
-    font-size: calc(var(--fon-medio) * 0.8);
+    font-size: var(--fon-pequeno);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .cartao p{
@@ -406,7 +413,7 @@ body{
 
 .container-botao.vermais{
     width: 8rem;
-    font-size: calc(var(--fon-pequeno) * 1.5);
+    font-size: calc(var(--fon-pequeno) * 1.1);
     bottom: 5px;
 }
 
